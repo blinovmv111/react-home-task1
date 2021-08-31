@@ -1,0 +1,15 @@
+footer {   
+    grid-column: 1 / 3;
+    .flex-wrapper {       
+        height: 100%; 
+        display: flex;
+        .left-block {
+            width: 169px;
+            background-color: #F51E38;
+        }
+        .right-block {
+            flex-grow: 1;
+            background-color: #0F1E36;
+        }
+    }
+}

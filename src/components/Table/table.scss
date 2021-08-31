@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    width: 807px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    tr {
+        height: 39px;
+        &.active {
+            background-color: #90cdee6e;
+        }
+    }   
+    td:first-child, th:first-child {
+        padding-left: 17px;
+    }
+}

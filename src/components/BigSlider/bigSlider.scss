@@ -1,0 +1,95 @@
+.slick-slider {
+    height: 100%;
+    .slide1 {
+        height: 307px;
+        background: no-repeat url(../../images/bigSlider/slide1.png);
+        position: relative;
+        &__descr {
+            position: absolute;
+            left: 53px;
+            top: 89px;
+            margin: 0 auto;
+            max-width: 235px;
+            &-span {
+                font-size: 16px;
+                line-height: 14px;
+                color: #FFFFFF;
+                &_16px {
+                    font-size: 16px;
+                }
+            }
+            h2 {
+                margin: 5px 0;
+                font-size: 28px;
+                line-height: 30px;
+                text-transform: capitalize;
+                color: #FFFFFF;
+            }
+            .button-container { 
+                display: flex;
+                margin-top: 38px;
+                .play {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 10px;
+                    img {
+                        margin-left: 5px;
+                    }
+                }
+                .share {
+                    width: 24px;
+                    height: 22px;
+                    margin-left: 8px;
+                        img {                    
+                            margin: 0 auto;
+                        }
+                }
+            }
+        }
+    }
+    
+    .slide2 {
+        height: 307px;
+        background: no-repeat url(../../images/bigSlider/slide2.jpg);
+    }
+    
+    .slide3 {
+        height: 307px;
+        background: no-repeat url(../../images/bigSlider/slide3.png);
+    }
+    
+    .slide4 {
+        height: 307px;
+        background: no-repeat url(../../images/bigSlider/slide4.jpg);
+    }
+
+    button {
+        &.slick-arrow, &.slick-prev {
+            display: none !important;
+        }
+    }
+
+}
+
+.slick-dots {
+    bottom: 9px;
+    ul {
+        margin: -4px !important;
+        li {
+            margin: 0;
+            &.slick-active {
+                div {
+                    svg {
+                        path {
+                          fill: #3E2AD1;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+

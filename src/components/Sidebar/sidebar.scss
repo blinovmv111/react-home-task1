@@ -1,0 +1,64 @@
+.sidebar {
+    grid-row: 2 / 3;
+    border-right: 1px solid #EEEEEE;
+    padding: 35px 0 0 26px;
+    &__top {
+        li {
+            display: flex;
+            margin-bottom: 20px;
+            div {
+                width: 33px;
+            }
+            a {
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 700;
+                color: #0F1E36;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            &.active {
+                a {
+                    color: #3E2AD1;
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+    h3 {
+        font-size: 12px;        
+        margin-bottom: 17px;
+    }
+    &__middle, &__bottom {
+        li {
+            display: flex;
+            margin-bottom: 20px;
+            div {
+                width: 33px;
+            }
+            a {
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 700;
+                color: #0F1E36;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .playlist-head {
+        display: flex;
+        align-items: center;
+        margin: 0 19px 13px 0;
+        h3 {
+            margin: 0;
+            flex-grow: 1;
+        }
+    }    
+   
+}

@@ -1,0 +1,25 @@
+.album-page {
+    border-top: 1px solid #EEEEEE;
+    background-color:lightcyan;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        margin: 20px auto;
+        text-align: center;
+    }
+    button {
+        width: 150px;
+        height: 35px;
+        border: none;
+        background-color: #a82d6f;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+
+    }
+}
