@@ -59,6 +59,36 @@ export const cellData = [
 		share: 'icons/Table/share-table.svg',
 		dots: 'icons/Table/group-dots-table.svg',
 	},
+	{
+		like: 'icons/like.svg',
+		song: 'Cccccccc',
+		artist: 'cccccc',
+		dalyPlace: '00,000',
+		time: '1:59',
+		option: 'icons/Donload.svg',
+		share: 'icons/Table/share-table.svg',
+		dots: 'icons/Table/group-dots-table.svg',
+	},
+	{
+		like: 'icons/like.svg',
+		song: 'Dddddddd',
+		artist: 'ddddd',
+		dalyPlace: '00,000',
+		time: '1:43',
+		option: 'icons/Donload.svg',
+		share: 'icons/Table/share-table.svg',
+		dots: 'icons/Table/group-dots-table.svg',
+	},
+	{
+		like: 'icons/like.svg',
+		song: 'Eeeeee',
+		artist: 'eeee',
+		dalyPlace: '00,000',
+		time: '1:35',
+		option: 'icons/Donload.svg',
+		share: 'icons/Table/share-table.svg',
+		dots: 'icons/Table/group-dots-table.svg',
+	},
 ]
 export const columns = [
 	{

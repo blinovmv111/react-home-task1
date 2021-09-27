@@ -75,7 +75,7 @@ const Navbar = () => {
                     )                    
                 })
             }
-            <User active="active"/>
+            <User/>
         </header>
     );
 };
