@@ -1,7 +1,7 @@
 import React from 'react';
 import THead from '../THead'
 import TBody from '../TBody';
-import { columns, cellData } from '../../tableData.js';
+import { columns, cellData } from './tableData.js';
 
 import './table.scss';
 
@@ -13,8 +13,8 @@ const Table = () => {
     }
     return (
         <table>
-            <THead columnRenderer={columnRenderer} columns={columns}></THead>
-            <TBody columns={columns} rows={cellData}></TBody>            
+            <THead columnRenderer={columnRenderer} columns={columns}/>
+            <TBody columns={columns} rows={cellData}/>            
         </table>
     );
 };

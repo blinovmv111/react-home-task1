@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+import Image from '../ImageComponent';
+
 import './bigSlider.scss';
-import share from '../../icons/share.svg';
-import play from '../../icons/play.svg';
 
 const BigSlider = () => {
     const settings = {
@@ -12,6 +12,7 @@ const BigSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        className: "big-slider",
           appendDots: (dots: any) => (
             <div
               style={{
@@ -23,7 +24,7 @@ const BigSlider = () => {
               <ul style={{ margin: "0px" }}> {dots} </ul>
             </div>
           ),
-          customPaging: (i: any) => (
+          customPaging: () => (
             <div
               style={{
                 width: "30px",
@@ -40,28 +41,29 @@ const BigSlider = () => {
       <Slider {...settings}>
         <div className="slide1">
           <div className="slide1__descr">
-            <span className="slide1__descr-span">// TRENDING</span>
+            <span className="slide1__descr-span">&frasl; &frasl; &ensp;TRENDING</span>
             <h2>Akcent feat Lidia Buble & DDY Nunes</h2>
             <span className="slide1__descr-span slide1__descr-span_16px">- Kamelia</span>
             <div className="button-container">
-              <button className="play">
+              <button className="play" type="button">                
                 PLAY
-                <img src={play} alt="icon"/>
+                <Image src='icons/BigSlider/play.svg' className='play-img'/>
               </button>
-              <button className="share">
-                <img src={share} alt="icon"/>
+              <button className="share" type="button">
+                <Image src='icons/BigSlider/share.svg' className='share-img'/>
               </button>
             </div>
-          </div>
+          </div>          
+          <Image src="images/bigSlider/ant1.png "/>
         </div>
         <div className="slide2">
-            <h3>2</h3>
+          <Image src="images/bigSlider/ant2.png "/>
         </div>
         <div className="slide3">
-            <h3>3</h3>
+          <Image src="images/bigSlider/ant3.png "/>
         </div>
         <div className="slide4">
-            <h3>4</h3>
+          <Image src="images/bigSlider/ant4.png "/>
         </div>             
       </Slider>
     );

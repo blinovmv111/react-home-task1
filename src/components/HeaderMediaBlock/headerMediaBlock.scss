@@ -1,0 +1,22 @@
+.headerPanelBlock {
+    width: 87px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #EEEEEE;
+}
+.tv {
+    img {
+        max-width: 25px;
+    }
+}
+.radio {
+    img {
+        max-width: 22px;
+    }
+}
+.bell {
+    img {
+        max-width: 20px;
+    }
+}

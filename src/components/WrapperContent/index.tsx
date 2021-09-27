@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import './wrapperContent.scss';
 
 interface WrapperProps {
-    children?: React.ReactChild | React.ReactNode;
+    children: React.ReactChild | React.ReactNode;
 }
 
 const WrapperContent: FC<WrapperProps> = ({children}) => {

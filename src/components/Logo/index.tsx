@@ -1,13 +1,15 @@
 import React from 'react';
-import LogoIcon from '../../icons/logo.svg';
+import { Link } from 'react-router-dom';
+
+import Image from '../ImageComponent';
 
 import './logo.scss';
 
 const Logo = () => {
     return (
-        <div className="logo">
-            <img src={LogoIcon} alt="logo" />
-        </div>
+        <Link className="logo" to="/">
+            <Image src='icons/logo.svg' className="logo-image"/>
+        </Link>
     );
 };
 

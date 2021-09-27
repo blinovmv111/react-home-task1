@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 import './mainContentWindow.scss'
 
 interface MainProps {
-    children?: React.ReactChild | React.ReactNode;
+    children: React.ReactChild | React.ReactNode;
 }
 
 const MainContentWindow: FC<MainProps> = ({children}) => {
     return (
-        <div className="main-content">
+        <main className="main-content">
             {children}
-        </div>
+        </main>
     );
 };
 

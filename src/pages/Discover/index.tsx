@@ -10,7 +10,7 @@ interface DiscoverProps {
 }
 
 
-const DiscoverPage: FC<DiscoverProps> = ({children}) => {
+const DiscoverPage: FC<DiscoverProps> = () => {
     return (
         <>
             <div className="upperPartSlider">

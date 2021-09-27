@@ -5,18 +5,19 @@
     &__top {
         li {
             display: flex;
-            margin-bottom: 20px;
-            div {
-                width: 33px;
-            }
+            margin-bottom: 22px;
             a {
                 text-decoration: none;
                 font-size: 12px;
                 font-weight: 700;
                 color: #0F1E36;
                 opacity: 0.5;
+                display: flex;
                 &:hover {
                     opacity: 0.8;
+                }
+                span {
+                    width: 33px;
                 }
             }
             &.active {
@@ -35,18 +36,19 @@
     &__middle, &__bottom {
         li {
             display: flex;
-            margin-bottom: 20px;
-            div {
-                width: 33px;
-            }
+            margin-bottom: 24px;
             a {
                 text-decoration: none;
                 font-size: 12px;
                 font-weight: 700;
                 color: #0F1E36;
-                opacity: 0.5;
+                opacity: 0.5;                
+                display: flex;
                 &:hover {
                     opacity: 0.8;
+                }
+                span {
+                    width: 33px;
                 }
             }
         }
@@ -59,6 +61,19 @@
             margin: 0;
             flex-grow: 1;
         }
-    }    
-   
+        &__icon {
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+    &__bottom {        
+        opacity: 0;
+        visibility: hidden;
+        transition: .35s opacity, .35s visibility;
+        &.visible {    
+            opacity: 1;        
+            visibility: visible;
+        }
+    }   
 }

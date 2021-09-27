@@ -8,7 +8,7 @@ const AlbumPage = () => {
     return (
         <div className="album-page">
             <h2>Album Page</h2>            
-            <button onClick={() => history.push('/')}>Back to Discover</button>
+            <button onClick={() => history.push('/')} type="button">Back to Discover</button>
         </div>
     );
 };

@@ -8,7 +8,7 @@ const SongsPage = () => {
     return (
         <div className="songs-page">
             <h2>Songs Page</h2>
-            <button onClick={() => history.push('/')}>Back to Discover</button>
+            <button onClick={() => history.push('/')} type="button">Back to Discover</button>
         </div>
     );
 };

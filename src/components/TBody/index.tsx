@@ -11,13 +11,12 @@ const TBody = (props: any) => {
         if(rowNumber !== null) {            
             setActiveRow(rowNumber);
         }
-        console.log(rowNumber);
     }
 
     return (
         <tbody>
              {props.rows.map((row: any, index: any) => <TRow rowIndex={index} key={row.time} row={row} activeRow={activeRow} 
-             handleClick={rowClick}></TRow>)}
+             handleClick={rowClick}/>)}
         </tbody>
     );
 };

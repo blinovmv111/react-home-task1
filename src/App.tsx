@@ -3,12 +3,13 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import "./sass/index.scss";
 
 
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Logo from './components/Logo';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import WrapperContent from './components/WrapperContent';
 import MainContentWindow from './components/MainContentWindow';
+
 
 import AlbumPage from './pages/Albums';
 import DiscoverPage from './pages/Discover';
@@ -19,7 +20,7 @@ const App = () => {
     <BrowserRouter>
       <WrapperContent>
         <Logo/>
-        <Navbar/>
+        <Header/>
         <Sidebar/>
         <MainContentWindow>              
             <Switch>
