@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-import classNames from 'classnames';
+import React, {useState, useEffect} from 'react';
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
 
 import './list.scss'
 import Image from '../ImageComponent';
 
-interface Item {
+interface Item extends RouteComponentProps<any> {
     className: string,
     data: {id: number,
         icon: string,
@@ -15,11 +14,18 @@ interface Item {
     activeProperty?: boolean | undefined
 }
 
-const List = (props: Item) => {
-    const [acitveItem, setActiveItem] = useState<null | number>(props.data[0].id);
 
-    const onClickAction = (id: number) => {
-        setActiveItem(id)
+const List = (props: Item) => {
+    const pathName = document.location.pathname;
+
+    const [activeItem, setActiveItem] = useState<null | string>(pathName);
+
+    useEffect(() => {
+        setActiveItem(pathName)
+    }, [pathName])
+
+    const onClickAction = (path: string) => {
+        setActiveItem(path)
     }
   
     return (
@@ -30,10 +36,10 @@ const List = (props: Item) => {
                     const b = "Active.svg";
                     const c = a + b;
                     return (                        
-                        <li onClick={() => onClickAction(id)} key={id} className={id === acitveItem && props.activeProperty ? 'active' : ''}>
+                        <li onClick={() => onClickAction(path)} key={id} className={path === activeItem && props.activeProperty ? 'active' : ''}>
                             <Link to={path}>
                                 <span>
-                                    <Image src={id === acitveItem && props.activeProperty ? c : icon} alt="icon" />
+                                    <Image src={path === activeItem && props.activeProperty ? c : icon} alt="icon" />
                                 </span>                              
                                 {name}
                             </Link>
@@ -46,4 +52,4 @@ const List = (props: Item) => {
     );
 };
 
-export default List;
+export default withRouter(List) ;

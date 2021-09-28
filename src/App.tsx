@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import "./sass/index.scss";
 
 
@@ -27,6 +27,7 @@ const App = () => {
               <Route component={DiscoverPage} path="/" exact/>
               <Route component={SongsPage} path="/songs"/>
               <Route component={AlbumPage} path="/albums"/>
+              <Redirect to="/" from="/*"/>
             </Switch>
         </MainContentWindow> 
         <Footer/>

@@ -20,13 +20,13 @@ export const pagesSidebar = [
 	{
 		id: 4,
 		icon: 'icons/Sidebar/Artists.svg',
-		path: '/#',
+		path: '/sskfjslkjf',
 		name: 'Artists',
 	},
 	{
 		id: 5,
 		icon: 'icons/Sidebar/YouTube.svg',
-		path: '/#',
+		path: '/gdfgjdfg',
 		name: 'YouTube',
 	},
 ]

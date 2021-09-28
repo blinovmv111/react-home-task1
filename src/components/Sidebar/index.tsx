@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import cn from "classnames";
-// import cn from "classnames";
-// import { useParams } from "react-router";
 
 import './sidebar.scss';
 
@@ -17,13 +15,13 @@ const Sidebar = () => {
     // const {id}: any = useParams();
     // console.log(id);
 
-    const toggleActiveItem: any = (id: number | null) => {
+    // const toggleActiveItem: any = (id: number | null) => {
         
-        if(id !== null) {            
-            // setActiveLink(id);
+    //     if(id !== null) {            
+    //         setActiveLink(id);
 
-        }
-    }
+    //     }
+    // }
 
     const handleVisiblePlayList = () => {
         setVisiblePlayList(!visiblePlayList);
