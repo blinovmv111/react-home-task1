@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
-import "./sass/index.scss";
+import "./index.scss";
 
 
 import Header from './components/Header';

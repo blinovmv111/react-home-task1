@@ -1,0 +1,10 @@
+.input[disabled] {
+cursor: not-allowed;
+}
+
+.input[name="checkbox"],
+.input[name="radio"] {
+width: 40px;
+height: 40px;
+margin: 0 auto;
+}

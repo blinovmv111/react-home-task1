@@ -2,18 +2,14 @@ import React, {useState, useEffect} from 'react';
 import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
 
 import './list.scss'
-import Image from '../ImageComponent';
+import Icon from '../IconsComponent';
+import {IitemSidebar} from '../../types/types';
 
 interface Item extends RouteComponentProps<any> {
     className: string,
-    data: {id: number,
-        icon: string,
-        path?: string | undefined,
-        name: string
-    }[],
+    data: IitemSidebar[],
     activeProperty?: boolean | undefined
 }
-
 
 const List = (props: Item) => {
     const pathName = document.location.pathname;
@@ -24,22 +20,19 @@ const List = (props: Item) => {
         setActiveItem(pathName)
     }, [pathName])
 
-    const onClickAction = (path: string) => {
-        setActiveItem(path)
+    const onClickAction = (pathRoute: string) => {
+        setActiveItem(pathRoute)
     }
   
     return (
         <ul className={props.className}>
             {
-                props.data.map(({id, icon, name, path=''}) => {
-                    const a = icon.slice(0, -4);
-                    const b = "Active.svg";
-                    const c = a + b;
+                props.data.map(({id, name, width, height, fill, opacity, pathRoute=''}) => {
                     return (                        
-                        <li onClick={() => onClickAction(path)} key={id} className={path === activeItem && props.activeProperty ? 'active' : ''}>
-                            <Link to={path}>
-                                <span>
-                                    <Image src={path === activeItem && props.activeProperty ? c : icon} alt="icon" />
+                        <li onClick={() => onClickAction(pathRoute)} key={id} className={pathRoute === activeItem && props.activeProperty ? 'active' : ''}>
+                            <Link to={pathRoute}>
+                                <span>                                    
+                                    <Icon name={name} fill={pathRoute === activeItem && props.activeProperty ? '#3E2AD1' : fill} opacity={pathRoute === activeItem && props.activeProperty ? '1' : opacity} width={width} height={height} pointer="pointer"/>
                                 </span>                              
                                 {name}
                             </Link>

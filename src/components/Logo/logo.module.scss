@@ -1,9 +1,9 @@
 .logo {
     display: flex;
-    justify-content: left;
+    align-items: center;
     border-right: 1px solid #EEEEEE;
     margin: 14px 0 0 26px;
-    &-image {
-        width: 89px;
-    }
+}
+.logoImage {
+    width: 89px;
 }

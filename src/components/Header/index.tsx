@@ -1,76 +1,72 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
+import axios from 'axios';
 
-import './header.scss';
+import style from './header.module.scss';
+
+import { Iicons } from '../../types/types';
 
 import User from '../User';
-import Image from '../ImageComponent';
 import HeaderMediaBlock from '../HeaderMediaBlock';
+import Input from '../Input';
+import Icon from '../IconsComponent';
 
-const Navbar = () => {
 
-    interface navBlock {
-        classes: string,
-        src: string,
-        active?: boolean | undefined,        
-        id: number
-    }
+interface ImediaBlockProps extends Iicons {
+    id: number,       
+    nameBadge: string,
+    fillBadge: string,
+    strokeBadge: string,
+    widthBadge: string,
+    heightBadge: string,
+}
 
-    const [state, setState] = useState<navBlock[]>(
-        [
-            {   
-                id: 1,
-                classes: 'tv',
-                src: 'icons/Header/headerTV.svg',
-            },
-            {
-                id: 2,
-                classes: 'radio',
-                src: 'icons/Header/headerRadio.svg',
-            },
-            {
-                id: 3,
-                classes: 'bell',
-                src: 'icons/Header/headerBell.svg'
-            },
-
-        ]
-    )
+const Header = () => {
+    const [icons, setIcons] = useState<ImediaBlockProps[]>([])
 
     const toggleActiveBlock = (idBlock: number) => { 
-        // setState(state.filter(({id}) => id !== idD));
-        setState(state.map(({id, classes, src, active}) => {
+        setIcons(icons.map(({id, active, ...rest}) => {
             if (id === idBlock) {
                 active = !active                      
             } return {
                 id,
-                classes,
-                src,
-                active
+                active,
+                ...rest
             }
      } ))
     }
 
+    async function fetchMediaIcons() {
+        try {
+            const response = await axios.get<ImediaBlockProps[]>('http://localhost:3000/icons');
+            setIcons(response.data);
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+    useEffect(() => {
+        fetchMediaIcons()
+    }, [])
+
+
     return (
-        <header className="header-panel">
-            <div className="header-panel__search-block">
-                <div className="custom-input">
-                    <input type="text" placeholder = "Search your entertainment"/>                  
-                </div>
+        <header className={style.headerPanel}>
+            <div className={style.searchBlock}>
+                <Input type="text" className={style.inputSearch} name="searchText" placeholder="Search your entertainment"/>
             </div>
             {
-                state.map(({id, classes, src, active}) => {
-                    const a = src.slice(0, -4);
-                    const b = "Active.svg";
-                    const c = a + b;
+                icons.map(({id, name, className, width, height, fill, opacity, nameBadge, fillBadge, strokeBadge, widthBadge, heightBadge, active}) => {
                     return (
                         <HeaderMediaBlock 
-                            className={classNames(classes, active ? 'active' : '')}
+                            className={classNames(className, active ? 'active' : '')}
                             onBlockClick={toggleActiveBlock}
                             id={id}
                             key={id}
                             >
-                                <Image src={active ? c : src}/>
+                                <Icon name={name} fill={fill} opacity={opacity} width={width} height={height} pointer="pointer"/>
+                                {active ? <Icon name={nameBadge} fill={fillBadge} stroke={strokeBadge} width={widthBadge} height={heightBadge} className={className}/> : null}
+                                
                         </HeaderMediaBlock>
                     )                    
                 })
@@ -80,4 +76,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;

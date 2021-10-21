@@ -1,0 +1,18 @@
+.footer {   
+    grid-column: 1 / 3;   
+}
+.footerContainer {
+    height: 100%;    
+}
+.flexWrapper {       
+    height: 100%; 
+    display: flex;
+}
+.leftBlock {
+    width: 169px;
+    background-color: #F51E38;
+}
+.rightBlock {
+    flex-grow: 1;
+    background-color: #0F1E36;
+}

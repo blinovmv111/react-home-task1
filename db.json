@@ -1,0 +1,149 @@
+{
+    "icons": [
+        {
+            "id": 1,
+            "name": "tv",
+            "className": "tv",
+            "width": "25",
+            "height": "20",
+            "fill": "#0F1E36",
+            "opacity": "0.5",
+            "nameBadge": "circle",
+            "fillBadge": "#F51E38",
+            "strokeBadge": "#F5F5F5",
+            "widthBadge": "9",
+            "heightBadge": "9"
+        },
+        {
+            "id": 2,
+            "name": "radio",
+            "className": "radio",            
+            "width": "23",
+            "height": "20",
+            "fill": "#0F1E36",
+            "opacity": "0.5",
+            "nameBadge": "circle",
+            "fillBadge": "#F51E38",
+            "strokeBadge": "#F5F5F5",
+            "widthBadge": "9",
+            "heightBadge": "9"
+        },
+        {
+            "id": 3,
+            "name": "bell",
+            "className": "bell",
+            "width": "19",
+            "height": "24",
+            "fill": "#0F1E36",
+            "opacity": "0.5",
+            "nameBadge": "circle",
+            "fillBadge": "#F51E38",
+            "strokeBadge": "#F5F5F5",
+            "widthBadge": "9",
+            "heightBadge": "9"
+        }
+    ],
+    "pagesSidebar": [
+        {
+            "id": 1,
+            "name": "Discover",
+            "width": "16",
+            "height": "16",
+            "fill": "#0F1E36",
+            "pathRoute": "/"
+        },
+        {
+            "id": 2,
+            "name": "Songs",
+            "width": "11",
+            "height": "15",
+            "fill": "#0F1E36",
+            "pathRoute": "/songs"
+        },
+        {
+            "id": 3,
+            "name": "Albums",
+            "width": "13",
+            "height": "16",
+            "fill": "#0F1E36",
+            "pathRoute": "/albums"
+        },
+        {
+            "id": 4,            
+            "name": "Artists",
+            "width": "12",
+            "height": "16",
+            "fill": "#0F1E36",
+            "pathRoute": "/sskfjslkjf"
+        },
+        {
+            "id": 5,            
+            "name": "YouTube",
+            "width": "17",
+            "height": "13",
+            "fill": "#0F1E36",
+            "pathRoute": "/gdfgjdfg"
+        }
+    ],
+    "myTraks": [
+        {
+            "id": 1,            
+            "name": "Favourite",
+            "width": "15",
+            "height": "13",
+            "fill": "#0F1E36"
+        },
+        {
+            "id": 2,            
+            "name": "Recent History",
+            "width": "17",
+            "height": "13",
+            "fill": "#0F1E36"
+        },
+        {
+            "id": 3,            
+            "name": "Download Items",
+            "width": "15",
+            "height": "13",
+            "fill": "#0F1E36"
+        },
+        {
+            "id": 4,
+            "name": "Local Files",
+            "width": "16",
+            "height": "13",
+            "fill": "#0F1E36"
+        }
+    ],
+    "playList": [
+        {
+            "id": 1,
+            "name": "Bangla",
+            "width": "17",
+            "height": "14",
+            "fill": "#0F1E36"
+        }, 
+        {
+            "id": 2,            
+            "name": "English",
+            "width": "17",
+            "height": "14",
+            "fill": "#0F1E36"
+        }, 
+        {
+            "id": 3,
+            "name": "My Style",
+            "width": "17",
+            "height": "14",
+            "fill": "#0F1E36"
+        }, 
+        {
+            "id": 4,
+            "name": "Hindi",
+            "width": "17",
+            "height": "14",
+            "fill": "#0F1E36"
+        }
+    ]
+
+}

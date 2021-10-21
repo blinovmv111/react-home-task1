@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 
 import Image from '../ImageComponent';
 
-import './logo.scss';
+import style from './logo.module.scss';
+// import Icon from '../IconsComponent';
+
 
 const Logo = () => {
     return (
-        <Link className="logo" to="/">
-            <Image src='icons/logo.svg' className="logo-image"/>
+        <Link className={style.logo} to="/">
+            <Image src='icons/logo.svg' className={style.logoImage}/>
+            {/* <Icon name="logo" width="89" height="34"/> */}
         </Link>
     );
 };

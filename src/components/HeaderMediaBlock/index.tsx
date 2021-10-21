@@ -6,7 +6,7 @@ import classNames from 'classnames';
 interface HeaderMediaBlockProps {
     children: React.ReactChild | React.ReactNode;
     className?: string,
-    id: number,
+    id: number
     onBlockClick: (id: number) => void
 }
 
@@ -24,7 +24,7 @@ const HeaderMediaBlock: FC<HeaderMediaBlockProps> = ({
 
     const onBlockClickAction = () => {
         onBlockClick(id);
-    }
+    }   
 
     return (
         <div className={classes} onClick={onBlockClickAction} role="document">

@@ -6,15 +6,22 @@
     padding-left: 23px;
     display: grid;
     grid-template: 1fr 1fr / 35px 1fr;
-    column-gap: 14px;
+    column-gap: 14px;         
+    .user-foto {
+        position: relative;
+        grid-row: span 2;
+        cursor: pointer;
+        .icon-UserFotoBadge {
+            position: absolute;
+            top: 22px;
+            right: -3px;
+        }
+    }
     .user-name {
         font-size: 12px;
         font-weight: 700;
         line-height: 16px;
         color: #000;
-    }     
-    img {
-        grid-row: span 2;
     }
     .type-account {
         display: flex;

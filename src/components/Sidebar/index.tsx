@@ -1,27 +1,34 @@
 import React, {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
-import cn from "classnames";
+import classNames from "classnames";
+import axios from 'axios';
 
 import './sidebar.scss';
 
-import { pagesSidebar, myTraks, playList } from './asideData.js';
-import Image from "../ImageComponent";
+import Icon from '../IconsComponent';
 import List from "../List";
+import { IitemSidebar } from '../../types/types';
 
 const Sidebar = () => {
-    // const [acitveId, setActiveLink] = useState<null | number>(pagesSidebar[0].id);
     const [visiblePlayList, setVisiblePlayList] = useState(false);
+    const [pagesSidebar, setPagesSidebar] = useState<IitemSidebar[]>([]);
+    const [myTraks, setMyTraks] = useState<IitemSidebar[]>([]);
+    const [playList, setPlayList] = useState<IitemSidebar[]>([]);
 
-    // const {id}: any = useParams();
-    // console.log(id);
+    
+    async function fetchIcons(url: string, setState: any) {
+        try {
+            const response = await axios.get<IitemSidebar[]>(url);
+            setState(response.data);
+        } catch (e) {
+            alert(e)
+        }
+    }
 
-    // const toggleActiveItem: any = (id: number | null) => {
-        
-    //     if(id !== null) {            
-    //         setActiveLink(id);
-
-    //     }
-    // }
+    useEffect(() => {
+        fetchIcons('http://localhost:3000/pagesSidebar', setPagesSidebar);
+        fetchIcons('http://localhost:3000/myTraks', setMyTraks);
+        fetchIcons('http://localhost:3000/playList', setPlayList);
+    }, []);
 
     const handleVisiblePlayList = () => {
         setVisiblePlayList(!visiblePlayList);
@@ -37,11 +44,11 @@ const Sidebar = () => {
             <div className="playlist-head">
                 <h3>Playlist</h3>
                 <div className="playlist-head__icon">
-                    <Image src="icons/Sidebar/Plus.svg" handleClick={handleVisiblePlayList}/>
+                    <Icon name="plus" fill="#3F4B5E" width="12" height="12" onClick={handleVisiblePlayList} pointer="pointer"/>
                 </div>
             </div>
             
-            <List className={cn('list', 'list-hidden', {visible: visiblePlayList})} data={playList}/>
+            <List className={classNames('list', 'list-hidden', {visible: visiblePlayList})} data={playList}/>
         </div>
     );
 };

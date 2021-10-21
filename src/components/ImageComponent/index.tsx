@@ -2,17 +2,9 @@ import React, {FC} from 'react';
 import classNames from 'classnames';
 
 import './image.scss';
+import {IimgProps} from '../../types/types';
 
-interface ImgProps{
-    src?: string,
-    alt?: string,
-    circle?: boolean,
-    className?: string
-    active?: boolean,
-    handleClick?: (() => void) | undefined
-}
-
-const Image: FC<ImgProps> = ({src='', alt='image', className='', circle=false, active=false, handleClick, ...attrs}) => {
+const Image: FC<IimgProps> = ({src='', alt='image', className='', circle=false, active, onClick}) => {
 
     const classes = classNames(className, {circle});
 
@@ -24,7 +16,7 @@ const Image: FC<ImgProps> = ({src='', alt='image', className='', circle=false, a
         src={src}
         alt={alt}
         className={classes}
-        onClick={handleClick}
+        onClick={active ? onClick : null}
         />
     );
 };

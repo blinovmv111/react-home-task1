@@ -11,12 +11,12 @@ const SmallSlider = () => {
   
   const [slideList, setSlideList] = useState<string[]>([]);
 
-  async function fetchImage(q: number) {
+  async function fetchImage(quantity: number) {
     try {
-      const response = await axios.get(`https://dog.ceo/api/breeds/image/random/${q}`);
+      const response = await axios.get(`https://dog.ceo/api/breeds/image/random/${quantity}`);
       setSlideList(response.data.message);
-    } catch (e) {
-      alert(e)
+    } catch (err) {
+      alert(err);
     }
   }
 
@@ -35,13 +35,9 @@ const SmallSlider = () => {
     };
     
     const getDogBreed = (urlPath: string) => {
-      const a = new URL(urlPath);
-      const b = a.pathname.split('/')[2];      
-      return b.slice(0, 1).toUpperCase() + b.slice(1, b.length);
-    }
-
-    const generateKey = (urlPath: string) => {
-      return `${ getDogBreed(urlPath) }_${ new Date().getTime() }`;
+      const urlString = new URL(urlPath);
+      const breed = urlString.pathname.split('/')[2];      
+      return breed.slice(0, 1).toUpperCase() + breed.slice(1, breed.length);
     }
  
     return (
@@ -50,7 +46,7 @@ const SmallSlider = () => {
             {slideList.length ? <Slider {...settings}>
                 {slideList.map((slideURL) => {
                   return (
-                    <div className="slideSmall" key={generateKey(slideURL)}>
+                    <div className="slideSmall" key={new Date().getTime()}>
                        <Image src={slideURL}/>
                       <div className="titleTrack">{getDogBreed(slideURL)}</div>
                       <span>cute dog</span>

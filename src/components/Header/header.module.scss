@@ -1,0 +1,35 @@
+.headerPanel {
+    grid-column: 2 /3;
+    display: flex;
+    align-items: center;
+}
+.searchBlock {
+    height: 100%;        
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #EEEEEE;
+    flex-grow: 1;
+    padding-left: 21px;
+}
+.inputSearch {
+    width: 200px;
+    border: none;                
+    height: 36px;
+    text-overflow: ellipsis;
+    &::placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        padding-left: 25px;
+        height: 100%;
+        background: url('../../icons/headerSearch.svg') no-repeat;
+        line-height: 150%;
+        opacity: 1; 
+        transition: opacity 0.3s ease;
+    }
+    &:focus {
+        &::placeholder {
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+    }
+}
