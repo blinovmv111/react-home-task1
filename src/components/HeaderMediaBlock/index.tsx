@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 
-import './headerMediaBlock.scss';
 import classNames from 'classnames';
 
+import style from './headerMediaBlock.module.scss';
+
 interface HeaderMediaBlockProps {
-    children: React.ReactChild | React.ReactNode;
     className?: string,
     id: number
     onBlockClick: (id: number) => void
@@ -18,7 +18,7 @@ const HeaderMediaBlock: FC<HeaderMediaBlockProps> = ({
  }) => {
 
     const classes = classNames(
-        "headerPanelBlock",
+        style.headerPanelBlock,
         className
     );
 

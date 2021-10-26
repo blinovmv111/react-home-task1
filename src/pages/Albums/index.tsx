@@ -1,14 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '../../components/Button';
 
-import './albumsPage.scss';
+import style from './albumsPage.module.scss';
 
 const AlbumPage = () => {
     const history = useHistory();
     return (
-        <div className="album-page">
-            <h2>Album Page</h2>            
-            <button onClick={() => history.push('/')} type="button">Back to Discover</button>
+        <div className={style.albumPage}>
+            <h2 className={style.headerAlbumPage}>Album Page</h2>
+            <Button className={style.buttonAlbumPage} onClick={() => history.push('/')}>Back to Discover</Button>
         </div>
     );
 };

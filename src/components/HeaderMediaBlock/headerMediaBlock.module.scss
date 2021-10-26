@@ -1,0 +1,36 @@
+.headerPanelBlock {
+    position: relative;
+    width: 87px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #EEEEEE;
+}
+:global {
+    .tv {
+        svg.icon-circle {
+            position: absolute;
+            top: 20px;
+            right: 27px;
+        }
+    }
+}
+:global {
+    .radio {
+        svg.icon-circle {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+        }
+    }
+}
+:global {
+    .bell {
+        svg.icon-circle {
+          position: absolute;
+          top: 18px;
+          right: 32px;
+      }
+    }
+}

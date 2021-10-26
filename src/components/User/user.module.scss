@@ -1,0 +1,46 @@
+@import "../../sass/base/variables";
+@import "../../sass/base/function";
+
+.userBlock {
+    width: 222px;
+    height: 40px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 23px;
+    display: grid;
+    grid-template: 1fr 1fr / 35px 1fr;
+    column-gap: 14px;
+}
+.userFoto {
+    position: relative;
+    grid-row: span 2;
+    cursor: pointer;
+}
+
+:global {
+    .icon-UserFotoBadge {
+        position: absolute;
+        top: 22px;
+        right: -3px;
+    }
+}
+
+.userName {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #000;
+}
+
+.typeAccount {
+    display: flex;
+    align-items: baseline;
+}
+
+.typeAccountText {
+    color: $blue;
+    padding-left: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+}

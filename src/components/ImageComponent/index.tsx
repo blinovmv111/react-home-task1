@@ -1,15 +1,18 @@
 import React, {FC} from 'react';
 import classNames from 'classnames';
 
-import './image.scss';
+import style from './image.module.scss';
 import {IimgProps} from '../../types/types';
 
 const Image: FC<IimgProps> = ({src='', alt='image', className='', circle=false, active, onClick}) => {
 
-    const classes = classNames(className, {circle});
+    const classes = classNames(
+        className,
+        {[style.circle]: circle}
+        );
 
     if (!src) {
-        src = 'https://via.placeholder.com/50x50'
+        src = 'https://via.placeholder.com/20x20'
     }
     return (
         <img

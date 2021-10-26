@@ -4,14 +4,16 @@ import classNames from 'classnames';
 import IconsSVG from "../../sprite.svg";
 import { Iicons } from '../../types/types';
 
-import './icon.scss';
+import style from './icon.module.scss';
 
 const Icon: FC<Iicons> = ({name, className, width, height, fill, opacity = '', stroke = '', active, onClick, ...attrs}) => {
 
     const classes = classNames(
         className,
-        {hidden: attrs.hidden},
-        {pointer: attrs.pointer}
+        {
+          [style.pointer]: attrs.pointer,
+          [style.hidden]: attrs.hidden,
+        }        
     )
     
   return(

@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import BigSlider from "../../components/BigSlider";
 import SmallSlider from "../../components/SmallSlider";
-import Table from "../../components/Table";
+// import Table from "../../components/Table";
+import TableReact from '../../components/TableReact';
 
-import './discoverPage.scss';
+import style from './discoverPage.module.scss';
 
 interface DiscoverProps {
     children?: React.ReactNode | React.ReactChild;
@@ -13,13 +14,14 @@ interface DiscoverProps {
 const DiscoverPage: FC<DiscoverProps> = () => {
     return (
         <>
-            <div className="upperPartSlider">
+            <div className={style.upperPartSlider}>
                 <BigSlider/>
             </div>
-            <div className="bottomPart">
+            <div className={style.bottomPart}>
                 <SmallSlider/>            
-                <h3 className="title-table">Top Tracks</h3> 
-                 <Table/>
+                <h3 className={style.titleTable}>Top Tracks</h3> 
+                 {/* <Table/> */}
+                 <TableReact/>
             </div>           
         </>            
     );

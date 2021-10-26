@@ -1,19 +1,10 @@
 import React, {FC} from 'react';
 import classNames from 'classnames';
+import {IbuttonProps} from '../../types/types';
 
 import style from './button.module.scss';
 
-interface IbuttonProps {
-    children: React.ReactChild | React.ReactNode,
-    onClick: (() => void),
-    className: string,
-    disabled?: boolean,
-    active?: boolean,
-    href?: string,
-    main?: boolean
-}
-
-const Button: FC<IbuttonProps> = ({children, onClick, className, disabled, active, main, ...attrs}) => {
+const Button: FC<IbuttonProps> = ({children, onClick, className, disabled, ...attrs}) => {
 
   const onClickAction = (e: any) => {
     if (disabled) {
@@ -22,13 +13,9 @@ const Button: FC<IbuttonProps> = ({children, onClick, className, disabled, activ
     return onClick();
   };
 
-  const classes = classNames(
-      {
-        [style.main]: main,
-      },    
+  const classes = classNames(    
     style.btn,
     className,
-    { active },
   );
 
   const Tag = attrs.href ? 'a' : 'button';

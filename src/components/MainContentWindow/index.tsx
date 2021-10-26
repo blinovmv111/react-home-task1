@@ -1,13 +1,9 @@
 import React, {FC} from 'react';
-import './mainContentWindow.scss'
+import style from './mainContentWindow.module.scss';
 
-interface MainProps {
-    children: React.ReactChild | React.ReactNode;
-}
-
-const MainContentWindow: FC<MainProps> = ({children}) => {
+const MainContentWindow: FC = ({children}) => {
     return (
-        <main className="main-content">
+        <main className={style.mainContent}>
             {children}
         </main>
     );

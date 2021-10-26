@@ -144,6 +144,172 @@
             "height": "14",
             "fill": "#0F1E36"
         }
+    ],
+    "mockData": [
+        {
+            "id": 1,
+            "empty1": "icon0",
+            "song": "Pontiac",
+            "artist": "Grand Prix",
+            "dailyPlays": 38,
+            "time": "9:42",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 2,
+            "empty1": "icon0",
+            "song": "Geo",
+            "artist": "Prizm",
+            "dailyPlays": 11,
+            "time": "10:40",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 3,
+            "empty1": "icon0",
+            "song": "Eagle",
+            "artist": "Summit",
+            "dailyPlays": 9,
+            "time": "19:10",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 4,
+            "empty1": "icon0",
+            "song": "Volvo",
+            "artist": "240",
+            "dailyPlays": 36,
+            "time": "15:59",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 5,
+            "empty1": "icon0",
+            "song": "Pontiac",
+            "artist": "GTO",
+            "dailyPlays": 43,
+            "time": "17:42",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 6,
+            "empty1": "icon0",
+            "song": "Lexus",
+            "artist": "IS",
+            "dailyPlays": 36,
+            "time": "6:08",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 7,
+            "empty1": "icon0",
+            "song": "Chevrolet",
+            "artist": "Tracker",
+            "dailyPlays": 100,
+            "time": "9:49",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 8,
+            "empty1": "icon0",
+            "song": "Lamborghini",
+            "artist": "Diablo",
+            "dailyPlays": 95,
+            "time": "2:06",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 9,
+            "empty1": "icon0",
+            "song": "Lincoln",
+            "artist": "Continental",
+            "dailyPlays": 89,
+            "time": "21:19",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 10,
+            "empty1": "icon0",
+            "song": "Jaguar",
+            "artist": "S-Type",
+            "dailyPlays": 89,
+            "time": "1:29",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 11,
+            "empty1": "icon0",
+            "song": "Jaguar",
+            "artist": "XJ Series",
+            "dailyPlays": 98,
+            "time": "16:45",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 12,
+            "empty1": "icon0",
+            "song": "Mercury",
+            "artist": "Monterey",
+            "dailyPlays": 93,
+            "time": "19:31",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 13,
+            "empty1": "icon0",
+            "song": "Ford",
+            "artist": "Crown Victoria",
+            "dailyPlays": 97,
+            "time": "11:44",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 14,
+            "empty1": "icon0",
+            "song": "Chrysler",
+            "artist": "Prowler",
+            "dailyPlays": 54,
+            "time": "17:28",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        },
+        {
+            "id": 15,
+            "empty1": "icon0",
+            "song": "Lincoln",
+            "artist": "Town Car",
+            "dailyPlays": 35,
+            "time": "2:04",
+            "option": "icon1",
+            "empty2": "icon2",
+            "empty3": "icon3"
+        }    
     ]
-
 }

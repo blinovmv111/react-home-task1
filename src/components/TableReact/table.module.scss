@@ -1,0 +1,87 @@
+@import "../../sass/base/variables";
+@import "../../sass/base/function";
+
+.tableTracks {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+}
+.id {
+    width: calc_rem_value(45);
+}
+.empty1 {
+    width: calc_rem_value(101);
+}
+.song {
+    width: calc_rem_value(142);
+}
+.artist {
+    width: calc_rem_value(167);
+}
+.dailyPlays {
+    width: calc_rem_value(106);
+}
+.time {
+    width: calc_rem_value(82);
+}
+.option {
+    width: calc_rem_value(47);
+}
+.empty2 {
+    width: calc_rem_value(60);
+}
+.empty3 {
+    width: calc_rem_value(37);
+}
+.tableTracksBody {
+    opacity: 0.5;        
+    tr:hover {background-color: darken(#fff, 10%)}
+}
+.tableRow {
+    height: 38px;
+    &.active {
+        background-color: #90cdee6e;
+    }
+}
+// tr, td, th {
+    
+//     border: 1px solid #cecece;
+// }
+td:first-child, th:first-child {
+    min-width: 20px;
+    padding-left: 17px;
+}
+
+// table tr:hover {background-color: darken(#fff, 10%)}
+
+@media (min-width: 1000px) {
+    .tableTracks {
+        width: 807px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tableTracks {
+        width: 1100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .tableTracks {
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .tableTracks {
+        width: 1400px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .tableTracks {
+        width: 1600px;
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../sass/base/variables";
+
+.listItem {
+    display: flex;
+    margin-bottom: 23px;
+
+    :global {
+        .listItemLink {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        color: $text-color;
+        opacity: 0.5;
+        display: flex;
+            &:hover {
+                opacity: 0.8;
+            }
+            span {
+                width: 33px;
+            }
+        }
+    }
+    &:global(.active) {
+        :global {
+            .listItemLink {
+                color: $blue;
+                opacity: 1;
+            }
+        }
+                 
+    }
+       
+}

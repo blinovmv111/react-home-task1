@@ -1,3 +1,5 @@
+@import "../../sass/base/variables";
+
 .footer {   
     grid-column: 1 / 3;   
 }
@@ -10,7 +12,7 @@
 }
 .leftBlock {
     width: 169px;
-    background-color: #F51E38;
+    background-color: $main-red;
 }
 .rightBlock {
     flex-grow: 1;

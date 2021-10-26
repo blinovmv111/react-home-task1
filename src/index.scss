@@ -1,16 +1,27 @@
+@import-normalize;
+
 @import "./sass/base/variables";
+@import "./sass/base/function";
 @import "./sass/libs/slick";
 @import "./sass/libs/slickTheme";
 
-* {
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;    
+    color: $text-color;
+}
+
+ul {
     margin: 0;
     padding: 0;
-    list-style: none;
-    outline: none;
-    box-sizing: border-box;
-    font-family: "Roboto", -apple-system, "system-ui", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Source Sans Pro', sans-serif;    
-    color: #0F1E36;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }

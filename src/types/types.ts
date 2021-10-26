@@ -31,3 +31,22 @@ export interface IimgProps {
     onClick?: (() => void) | any
 }
 
+export interface IdataTable {
+    id: number,
+    empty1: string,
+    song: string,
+    artis: string,
+    dailyPlays: number,
+    time: string,
+    option: string,
+    empty2: string,
+    empty3: string
+}
+
+export interface IbuttonProps {
+    onClick: (() => void),
+    className: string,
+    disabled?: boolean,
+    href?: string
+}
+
