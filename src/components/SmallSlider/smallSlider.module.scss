@@ -1,0 +1,45 @@
+.smallSliderContainer {
+    margin-left: 23px;
+    max-height: 215px;
+    :global {
+        .slick-list {
+            max-height: 153px;
+            .slick-track {
+                max-height: 153px;
+            }
+        }
+    }    
+    :global {    
+        .slick-slide {
+            margin-right: 10px;
+            width: 122px !important;
+        }
+    }
+}
+
+.smallSliderHeader {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 26px 0 13px 0;
+}
+.slideSmall {
+    max-width: 112px;        
+    overflow: hidden;
+}
+
+.titleTrack {
+    margin-top: 10px;
+    font-size: 12px;            
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.subtitle {
+    font-size: 10px;
+}
+.smallSlideImage {
+    height: 112px;
+    object-fit: cover;
+}

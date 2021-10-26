@@ -19,8 +19,7 @@ const DiscoverPage: FC<DiscoverProps> = () => {
             </div>
             <div className={style.bottomPart}>
                 <SmallSlider/>            
-                <h3 className={style.titleTable}>Top Tracks</h3> 
-                 {/* <Table/> */}
+                <h3 className={style.titleTable}>Top Tracks</h3>
                  <TableReact/>
             </div>           
         </>            

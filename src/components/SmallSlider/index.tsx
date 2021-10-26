@@ -5,7 +5,7 @@ import axios from 'axios';
 import Image from '../ImageComponent';
 import Loader from '../Loader';
 
-import './smallSlider.scss';
+import style from './smallSlider.module.scss';
 
 const SmallSlider = () => {
   
@@ -41,15 +41,15 @@ const SmallSlider = () => {
     }
  
     return (
-        <div className="small-slider-container">
-            <h3>Featured Tracks</h3>
+        <div className={style.smallSliderContainer}>
+            <h3 className={style.smallSliderHeader}>Featured Tracks</h3>
             {slideList.length ? <Slider {...settings}>
                 {slideList.map((slideURL) => {
                   return (
-                    <div className="slideSmall" key={new Date().getTime()}>
-                       <Image src={slideURL}/>
-                      <div className="titleTrack">{getDogBreed(slideURL)}</div>
-                      <span>cute dog</span>
+                    <div className={style.slideSmall} key={new Date().getTime()}>
+                       <Image src={slideURL} className={style.smallSlideImage}/>
+                      <div className={style.titleTrack}>{getDogBreed(slideURL)}</div>
+                      <span className={style.subtitle}>cute dog</span>
                     </div> 
                   )                    
                 })}                                        
