@@ -1,33 +1,13 @@
 import React, {useMemo, useState, useEffect} from 'react';
 import classNames from 'classnames';
 import { useTable } from 'react-table';
-import axios from 'axios';
-// import MOCK_DATA from './MOCK_DATA.json';
 import COLUMNS from './columns.jsx';
-import { IdataTable } from '../../types/types';
 
 import style from "./table.module.scss";
 import Icon from '../IconsComponent';
 
-const BasicTable = () => {
-
+const BasicTable = ({dataTable}:any) => {
     const [activeRow, setActiveRow] = useState<null | string>(null)
-    const [dataTable, setDataTable] = useState<IdataTable[]>([])
-
-    async function fetchTableData(url: string, setState: any) {
-        try {
-            const response = await axios.get<IdataTable[]>(url);
-            setState(response.data);
-        } catch (e) {
-                alert(e);
-        }
-    }
-
-    useEffect(() => {
-        fetchTableData('http://localhost:3000/mockData', setDataTable);
-    }, []);
-
-    console.log(dataTable);
 
     const rowClick: any = (id: string) => {
         if(id !== null) {

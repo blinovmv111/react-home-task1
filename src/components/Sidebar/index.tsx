@@ -10,13 +10,22 @@ import { IitemSidebar } from '../../types/types';
 
 const Sidebar = () => {
     const [visiblePlayList, setVisiblePlayList] = useState(false);
-    const [pagesSidebar, setPagesSidebar] = useState<IitemSidebar[]>([]);
-    const [myTraks, setMyTraks] = useState<IitemSidebar[]>([]);
-    const [playList, setPlayList] = useState<IitemSidebar[]>([]);
+    const initState = {pagesSidebar: [], myTraks: [], playList: []}
+    const [listSidebar, setListSidebar] = useState(initState);
 
-    // const [listSidebar, setListSidebar] = useState({});
+    const writeStateSidebar = function(arr: [][]) {     
+        setListSidebar({pagesSidebar: arr[0], myTraks: arr[1], playList: arr[2]});
 
-    
+    }
+
+    useEffect(() => {
+        const paths = ['pagesSidebar', 'myTraks', 'playList'];
+        const requests = paths.map(path => fetch(`http://localhost:3000/${path}`));
+        Promise.all(requests)      
+            .then(responses => Promise.all(responses.map(r => r.json())))
+            .then(arrs => writeStateSidebar(arrs))
+    }, []);
+
     async function fetchIcons(url: string, setState: any) {
         try {
             const response = await axios.get<IitemSidebar[]>(url);
@@ -26,27 +35,16 @@ const Sidebar = () => {
         }
     }
 
-    // const writeStateSidebar = function(key: string, arr: []) {
-    //     const newState = {...listSidebar, [key]: arr};
-    //     setListSidebar(newState);
-    // }
-
-    useEffect(() => {
-        fetchIcons('http://localhost:3000/pagesSidebar', setPagesSidebar);
-        fetchIcons('http://localhost:3000/myTraks', setMyTraks);
-        fetchIcons('http://localhost:3000/playList', setPlayList);
-    }, []);
-
     const handleVisiblePlayList = () => {
         setVisiblePlayList(!visiblePlayList);
     }
 
     return (
         <div className={style.sidebar}>
-            <List className="list" data={pagesSidebar} activeProperty/>
+            <List className="list" data={listSidebar.pagesSidebar} activeProperty/>
 
             <h3 className={classNames(style.headSidebar, style.myTraks)}>My Tracks</h3>     
-            <List className="list list-my-tracks" data={myTraks}/>
+            <List className="list list-my-tracks" data={listSidebar.myTraks}/>
 
             <div className={style.playlistHead}>
                 <h3 className={classNames(style.headSidebar, style.playlist)}>Playlist</h3>
@@ -55,7 +53,7 @@ const Sidebar = () => {
                 </div>                
             </div>
             
-            <List className={classNames('list', style.listHidden, {[style.visible]: visiblePlayList})} data={playList}/>
+            <List className={classNames('list', style.listHidden, {[style.visible]: visiblePlayList})} data={listSidebar.playList}/>
         </div>
     );
 };

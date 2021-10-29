@@ -1,28 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Slider from 'react-slick';
-import axios from 'axios';
 
 import Image from '../ImageComponent';
 import Loader from '../Loader';
 
 import style from './smallSlider.module.scss';
 
-const SmallSlider = () => {
-  
-  const [slideList, setSlideList] = useState<string[]>([]);
-
-  async function fetchImage(quantity: number) {
-    try {
-      const response = await axios.get(`https://dog.ceo/api/breeds/image/random/${quantity}`);
-      setSlideList(response.data.message);
-    } catch (err) {
-      alert(err);
-    }
-  }
-
-  useEffect(() => {
-    fetchImage(20);
-  }, [])
+const SmallSlider = ({slideList}: any) => {
 
     const settings = {
       className: "center",
@@ -44,7 +28,7 @@ const SmallSlider = () => {
         <div className={style.smallSliderContainer}>
             <h3 className={style.smallSliderHeader}>Featured Tracks</h3>
             {slideList.length ? <Slider {...settings}>
-                {slideList.map((slideURL) => {
+                {slideList.map((slideURL: any) => {
                   return (
                     <div className={style.slideSmall} key={new Date().getTime()}>
                        <Image src={slideURL} className={style.smallSlideImage}/>

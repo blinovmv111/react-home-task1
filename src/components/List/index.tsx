@@ -35,8 +35,8 @@ const List = (props: Item) => {
                 props.data.map(({id, name, width, height, fill, opacity, pathRoute=''}) => {
                     return (                        
                         <li onClick={() => onClickAction(pathRoute)} key={id} className={classNames(classes, pathRoute === activeItem && props.activeProperty ? 'active' : '')}>
-                            <Link to={pathRoute} className="listItemLink">
-                                <span>                                    
+                            <Link to={pathRoute} className={style.listItemLink}>
+                                <span className={style.iconContainer}>                                    
                                     <Icon name={name} fill={pathRoute === activeItem && props.activeProperty ? '#3E2AD1' : fill} opacity={pathRoute === activeItem && props.activeProperty ? '1' : opacity} width={width} height={height} pointer="pointer"/>
                                 </span>                              
                                 {name}

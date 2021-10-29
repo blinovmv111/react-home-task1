@@ -12,7 +12,7 @@ const Icon: FC<Iicons> = ({name, className, width, height, fill, opacity = '', s
         className,
         {
           [style.pointer]: attrs.pointer,
-          [style.hidden]: attrs.hidden,
+          [style.hidden]: attrs.hidden
         }        
     )
     
